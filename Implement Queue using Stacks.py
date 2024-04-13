@@ -32,11 +32,11 @@ class MyQueue:
         return not (self.direct_stack or self.reversed_stack)
 
     def _copy_from_direct_to_reversed(self):
-        """Copy all data from direct to reversed queue"""
+        """Copy all data from direct to reversed stacks"""
         while self.direct_stack:
             self.reversed_stack.append(self.direct_stack.pop())
 
     def _copy_from_reversed_to_direct(self):
-        """Copy all data from reversed to direct queue"""
+        """Copy all data from reversed to direct stacks"""
         while self.reversed_stack:
             self.direct_stack.append(self.reversed_stack.pop())
